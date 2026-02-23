@@ -4,5 +4,5 @@ Pair programming this week. We have built an API with authentication to implemen
 
 
 ## View it live
-https://project-auth-lisa-jessica.herokuapp.com/
+https://technigo-backends.onrender.com/auth-api/endpoints
 https://project-auth-lisa-jessica.netlify.app/login
