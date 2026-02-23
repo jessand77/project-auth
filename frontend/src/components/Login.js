@@ -36,7 +36,7 @@ const Login = () => {
     fetch(API_URL(mode), options)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.success) {
           batch(() => {
             dispatch(user.actions.setUserId(data.userId));
@@ -60,6 +60,7 @@ const Login = () => {
   return (
     <section>
       <h1>Sign in or Sign up</h1>
+
       <div className="radio-container">
         <label htmlFor="register">Register</label>
         <input
@@ -76,7 +77,9 @@ const Login = () => {
           onChange={() => setMode("login")}
         />
       </div>
+
       <form onSubmit={onFormSubmit}>
+
         <div className="input-field">
           <label htmlFor="username">
             Username
@@ -101,10 +104,13 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
+
         {validationError !== null && (
           <p className="error-message">{validationError}</p>
         )}
+
         <button type="submit">Submit</button>
+
       </form>
     </section>
   );
